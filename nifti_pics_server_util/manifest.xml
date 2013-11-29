@@ -1,0 +1,27 @@
+<package>
+  <description brief="nifti_pics_server_util">
+
+     Various utilities used by the In-Field Pictures Server and the OCU
+
+  </description>
+  <author>Benoit Larochelle</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url> </url>
+
+    <depend package="roscpp"/>
+    <depend package="rosconsole"/>
+    <depend package="image_transport"/>
+    <depend package="EXIFReader_msgs"/>
+
+    <!-- <rosdep name="geographicinfo"/> -->
+    <depend package="geodesy"/>
+
+    <export>
+       <cpp cflags="-I${prefix}/include" 
+            lflags="-Wl,-rpath,${prefix}/lib -L${prefix}/lib -lnifti_pics_server_util"/>
+    </export>
+
+</package>
+
+

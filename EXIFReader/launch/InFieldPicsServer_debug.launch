@@ -1,0 +1,19 @@
+<launch> 
+	<node launch-prefix="gdb -ex run --args" name="InFieldPicsServer" pkg="EXIFReader" type="InFieldPicsServer" output="screen">
+		<!-- <param name="folder" value="/home/robot/Dropbox/Camera Uploads"/> -->
+		<!-- <param name="folder" value="/home/robot/Pictures"/> -->
+                <param name="folder" value="/home/robot/Pictures/ReducedSet"/>
+		
+		<param name="mapOriginLatitudeDegrees" value="49.256635"/>
+		<param name="mapOriginLatitudeMinutes" value="0.000"/>
+		<param name="mapOriginLatitudeSeconds" value="0.000"/>
+
+		<param name="mapOriginLongitudeDegrees" value="7.041568"/>
+		<param name="mapOriginLongitudeMinutes" value="0.000"/>
+		<param name="mapOriginLongitudeSeconds" value="0.000"/>
+
+		<param name="mapOriginDirection" value="0.000"/>
+	</node>
+
+	<!-- <node pkg="tf" type="static_transform_publisher" name="base_link_to_laser" args="1.0 0.0 0.0 0.0 0.0 0.0 /map /earth 100" /> -->
+</launch>

@@ -1,0 +1,42 @@
+<package>
+  <description brief="EXIFReader">
+
+     Reads the Geo coordinates in the EXIF data
+
+Here are the 3 cases:
+
+1) Picture from the OCU:
+
+picture->latitude, picture->longitude, picture->direction will be filled by the In-Field Pictures Server
+
+2) Picture from the OCU, not referenced to /map:
+
+picture->latitude, picture->longitude, picture->direction will be zeros
+
+3) Picture from a mobile device:
+
+picture->latitude, picture->longitude, picture->direction will be filled by the In-Field Pictures Server
+
+If no GPS position was available, the values will be zeros. If no direction was available, the value will be zero.
+
+
+
+  </description>
+  <author>Benoit Larochelle</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url> </url>
+
+    <depend package="roscpp"/>
+    <depend package="rosconsole"/>
+    <depend package="cv_bridge"/>
+    <depend package="image_transport"/>
+    <depend package="nifti_pics_server_util"/>
+    <depend package="EXIFReader_msgs"/>
+
+    <!-- <rosdep name="geographicinfo"/> -->
+    <depend package="geodesy"/>
+
+</package>
+
+
